@@ -1,0 +1,19 @@
+(function (global, $) {
+    const Greetr = function (firstName, lastName, language) {
+        return new Greetr.init(firstName, lastName, language)
+    }
+
+    Greetr.prototype = {}
+
+    Greetr.init = function (firstName, lastName, language) {
+            const self = this;
+            self.firstName = firstName || ''
+            self.lastName = lastName || ''
+            self.language = language || 'en'
+    }
+
+    Greetr.init.prototype = Greetr.prototype
+
+    global.Greeter = global.G$ = Greetr
+
+})(window, $)
