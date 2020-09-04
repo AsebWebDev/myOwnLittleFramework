@@ -3,7 +3,25 @@
         return new Greetr.init(firstName, lastName, language)
     }
 
-    Greetr.prototype = {}
+    const supportedLang = [ 'en', 'sp' ] // Does not get exposed to the outside world
+
+    const greetings = {
+        'en': 'Hello',
+        'sp': 'Hola'
+    };
+
+    const formalGreetings = {
+        'en': 'Greetings',
+        'sp': 'Saludos'
+    }; 
+
+    const logMessages = {
+        'en': 'Logged In',
+        'sp': 'Inició sesión'
+    }
+    
+
+    Greetr.prototype = {} // All Methods here to any instance of Geetr, saves memory space
 
     Greetr.init = function (firstName, lastName, language) {
             const self = this;
